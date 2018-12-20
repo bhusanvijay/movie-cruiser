@@ -1,0 +1,36 @@
+sudo docker images
+sudo docker ps
+sudo docker ps -a
+sudo docker logs <IMAGE>
+sudo docker pull mysql:latest
+sudo docker run -d --name=test-mysql --env="MYSQL_ROOT_PASSWORD=root" mysql:latest
+sudo docker run -d -p3306:3306 --network=host -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=moviedb -e MYSQL_USER_NAME=root -e MYSQL_PASSWORD=root mysql:latest
+sudo docker exec -it <CONTAINER_ID> bash
+
+#Volume mapping
+sudo docker run -d --name=test-mysql --env="MYSQL_ROOT_PASSWORD=root" -v /Desktop/data/mysql: /var/lib/mysql mysql:latest
+
+#Port mapping
+sudo docker run -d --name=test-mysql --env="MYSQL_ROOT_PASSWORD=root" --publish 6603:3306 mysql:latest
+
+sudo docker build -t test-spring .
+sudo docker run --name=spring-app --network=host test-spring
+sudo docker build -t test-angular .
+sudo docker run -d -p 4200:4200 --network=host test-angular
+#Push images to docker
+sudo docker login
+sudo docker tag <IMAGE> bhusanvijay/movie-cruiser:angular-image
+sudo docker push bhusanvijay/movie-cruiser
+
+#install docker-docker compose
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# apply executable permission to the binaries (docker compose)
+sudo chmod +x /usr/local/bin/docker-compose
+
+#version (docker compose)
+docker-composer --version
+
+#running the docker-compose file
+sudo docker-compose up

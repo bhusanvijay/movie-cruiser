@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <span> Movies </span>
+    <button mat-button [routerLink] = "['/movies/popular']" > Popular </button>
+    <button mat-button [routerLink] = "['/movies/top_rated']" > Top Rated </button>
+    <button mat-button [routerLink] = "['/movies/watchlist']" > My Watchlist </button>
+    <button mat-icon-button [routerLink] = "['/movies/search']">         
+        <mat-icon aria-label="Search">search</mat-icon>        
+    </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

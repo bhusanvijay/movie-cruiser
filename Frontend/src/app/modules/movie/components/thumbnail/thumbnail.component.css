@@ -1,0 +1,28 @@
+.movie-thumbnail{
+    width: 250px;
+    margin: 10px;
+}
+.movie-image {
+    height: 450px;
+}
+.movie-overview {
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.movie-comments {
+    height: 25px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: x-small;
+}
+.movie-overview::-webkit-scrollbar {
+    width:2px;    
+    background: grey;
+}
+.movie-action {
+    text-align:  right;
+}
+.comments-label{
+    color: brown;
+}

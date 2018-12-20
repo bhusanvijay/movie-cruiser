@@ -1,0 +1,19 @@
+
+<mat-card class="movie-thumbnail">
+    <mat-card-header>
+        <mat-card-title>{{movie?.title}}</mat-card-title>
+        <mat-card-subtitle>{{movie?.release_date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class ="movie-image" mat-card-image [src]="movie?.poster_path" [alt] = "movie?.title">
+    <mat-card-content class="movie-overview">
+        {{movie?.overview}}
+    </mat-card-content>    
+    <mat-card-actions class="movie-action">
+        <button *ngIf="!useWatchlistApi" mat-raised-button color="accent" (click)="addToWatchlist()">Add to Watchlist</button>
+        <button *ngIf="useWatchlistApi" mat-raised-button color="warn" (click)="deleteFromWatchlist()">Delete</button>
+        <button *ngIf="useWatchlistApi" mat-raised-button color="primary" (click)="updateFromWatchlist('update')">Update comments</button>
+    </mat-card-actions>
+    <mat-card-footer class="movie-comments" *ngIf="useWatchlistApi">
+        <label class="comments-label">My comments:</label>&emsp;{{movie?.comments}}      
+    </mat-card-footer>
+</mat-card>

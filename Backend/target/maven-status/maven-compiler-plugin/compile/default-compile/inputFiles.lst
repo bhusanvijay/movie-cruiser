@@ -1,0 +1,9 @@
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/service/MovieServiceImpl.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/domain/Movie.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/repository/MovieRepository.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/service/MovieService.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/MovieCruiserApplication.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/exception/MovieExistException.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/exception/MovieNotFoundException.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/config/SwaggerConfig.java
+/home/ubuntu/Desktop/MovieCruiserApp/Backend/src/main/java/com/vb/mca/moviecruiser/controller/MovieController.java
